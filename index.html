@@ -402,6 +402,16 @@
             const detail = document.getElementById(detailId);
             detail.style.display = detail.style.display === "block" ? "none" : "block";
         }
+
+        function copyToClipboard(elementId) {
+    const text = document.getElementById(elementId).innerText;
+    navigator.clipboard.writeText(text).then(() => {
+        alert("Texto copiado: " + text);
+    }).catch(err => {
+        console.error("Error al copiar: ", err);
+    });
+ }
+
     </script>
 
 </body>
