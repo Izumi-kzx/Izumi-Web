@@ -337,9 +337,6 @@
             <!-- Cuadro adicional -->
             <div class="additional-info">
                 <p>#spotify <strong>enlace</strong></p>
-                <button class="copy-btn" onclick="copyToClipboard('spotifyLink')">
-                    <i class="fas fa-copy"></i> Copiar
-                </button>
             </div>
         </div>
         <div class="card" onclick="toggleDetails('capCutDetail')">
@@ -402,16 +399,6 @@
             const detail = document.getElementById(detailId);
             detail.style.display = detail.style.display === "block" ? "none" : "block";
         }
-
-        function copyToClipboard(elementId) {
-    const text = document.getElementById(elementId).innerText;
-    navigator.clipboard.writeText(text).then(() => {
-        alert("Texto copiado: " + text);
-    }).catch(err => {
-        console.error("Error al copiar: ", err);
-    });
- }
-
     </script>
 
 </body>
